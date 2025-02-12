@@ -23,5 +23,6 @@ public class OrderController {
 
         return new ResponseEntity<>(orderId, HttpStatus.OK);
     }
+    @GetMapping("{id}")
 
 }
