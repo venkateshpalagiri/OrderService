@@ -24,5 +24,8 @@ public class OrderController {
         return new ResponseEntity<>(orderId, HttpStatus.OK);
     }
     @GetMapping("{id}")
+    public ResponseEntity<String> getOrder(@PathVariable...){
+
+    }
 
 }
