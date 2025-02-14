@@ -1,5 +1,6 @@
 package com.venkatesh.OrderService.controller;
 
+import com.venkatesh.OrderService.entity.Order;
 import com.venkatesh.OrderService.model.OrderRequest;
 import com.venkatesh.OrderService.service.OrderService;
 import lombok.extern.log4j.Log4j2;
@@ -23,9 +24,10 @@ public class OrderController {
 
         return new ResponseEntity<>(orderId, HttpStatus.OK);
     }
-    @GetMapping("{id}")
-    public ResponseEntity<String> getOrder(@PathVariable...){
-
+    @GetMapping("/{id}")
+    public ResponseEntity<String> getOrder(@PathVariable long id){
+        Order order=orderService.getOrder(id);
+        return ResponseEntity.ok("Order retrived");
     }
 
 }
