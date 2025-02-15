@@ -29,5 +29,6 @@ public class OrderController {
         Order order=orderService.getOrder(id);
         return ResponseEntity.ok("Order retrived");
     }
+    @DeleteMapping("/{id}")
 
 }
