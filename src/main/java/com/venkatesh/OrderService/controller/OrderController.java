@@ -31,6 +31,7 @@ public class OrderController {
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteOrder(long orderId){
+        Order order=orderService.deleteOrder(orderId);
         //business logic here for deleting order
 
     }
